@@ -39,6 +39,11 @@ const ProductListingSection = () => {
                 Some Error occured while fetching products...
               </h1>
             </div>
+          ) : productsFilteredSorted.length === 0 ? (
+            <h1>
+              Sorry there are no products for selected filters. Please relaxe
+              your filters...
+            </h1>
           ) : (
             productsFilteredSorted.map((product) => (
               <ProductCard key={product._id} product={product} />
